@@ -4,4 +4,4 @@ phases:
   build:
     commands:
       - echo Start build phase
-      - aws s3 cp build/ s3://stfc-basics.com --recursive
+      - aws s3 cp . s3://stfc-basics --recursive

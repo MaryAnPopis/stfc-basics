@@ -3,58 +3,235 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Star Trek™ Fleet Command</title>
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="top-bar bg-blue">
-      <h1>Star Trek™ Fleet Command</h1>
+    <div class="top-bar bg-blue bg-dark pt-2 pb-2">
+      <h1 class="h4 text-white pl-5">Star Trek™ Fleet Command</h1>
     </div>
-    <div id="table-content" class="left-bar bg-grey">
-      <!-- <h2>Tabla de contenidos</h2> -->
-      
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 col-sm-12 col-xs-12 remove-padding">
+          <nav class="navbar navbar-expand-lg navbar-light section-nav">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="">
+                <li><a href="#lcars" class="anchor">LCARS</a></li>
+                <li>
+                  <a href="#grinding-hostiles" class="anchor"
+                    >Grinding hostiles</a
+                  >
+                  <ul>
+                    <li><a href="#crews" class="anchor">Crews</a></li>
+                  </ul>
+                </li>
+                <li><a href="#leveling-up" class="anchor">Leveling Up</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="col-md-9 col-sm-12 col-xs-12">
+          <section id="lcars" class="pb-5">
+            <h2 class="h1">LCARS</h2>
+            Lcars is a discord based service that you can use to query
+            information about missions, ships, tiering costs, hostiles, etc. You
+            can join LCARS here, please learn how to use it as it is the biggest
+            source information for this game.
+          </section>
+          <section id="grinding-hostiles" class="pb-5">
+            <h2 class="h1 pb-2">Grinding hostiles</h2>
+            <section id="crews" class="pb-3">
+              <h3 class="pb-3">Crews</h3>
+              <div id="reds">
+                <h4 class="pb-1">Reds</h4>
+                <div class="pb-3">
+                  <span class="h5">If no Pike</span>
+                  <ul class="circle-decoration">
+                    <li>
+                      - C. Uhura (C), C. Bones and C. Kirk or Instructor Spock
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span class="h5">If Pike</span>
+                  <dl class="pl-3 circle-decoration">
+                    <dt>Pike (C), Moreau and:</dt>
+                    <dd class="pl-4">
+                      - Tlaan for battleships level 29 and lower, interceptors
+                      and swarms
+                    </dd>
+                    <dd class="pl-4">
+                      - Chen for battleships level 30 and above, transports and
+                      explorers
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div id="lower-decks" class="pb-3">
+                <h4>Lower decks</h4>
+                <p>
+                  STFC does not give you a way to sort officers by stat. You can
+                  do the selections manually or use fill up a file like
+                  <a
+                    aria-label="Downloadable excel file"
+                    href="https://stfc-basics.s3.amazonaws.com/stfc.xlsx"
+                    >this</a
+                  >
+                  with your officer information (make sure they are off ship
+                  when you fill it up). If you fill up this file, you will only
+                  need to update it when you promote or level officers and if
+                  you do research that applies to all officers. This file will
+                  give you the opportunity to sort by stat and remove officers
+                  you have in other ships when building crews. Focus on the
+                  following stats when making crews based on your ship:
+                </p>
+                <ul>
+                  <li>- Explorers: defense</li>
+                  <li>- Interceptors: attack</li>
+                  <li>- Battleships: health</li>
+                  <li>- Miners: health</li>
+                </ul>
+              </div>
+              <div id="pvp" class="pb-3">
+                <h4>PVP</h4>
+              </div>
+              <div id="hostile-hotspots">
+                <h4>Hostile hotspots</h4>
+                <p>
+                  To find systems suitable for grinding hostiles, you can use
+                  commands like the ones below:
+                </p>
+                <ul>
+                  <li>- !hostiles int &lt;level-needed-here&gt;</li>
+                  <li>- !hostiles exp &lt;level-needed-here&gt;</li>
+                  <li>- !hostiles bs &lt;level-needed-here&gt;</li>
+                </ul>
+              </div>
+            </section>
+          </section>
+          <section id="leveling-up" class="pb-5">
+            <h2 class="h1">Leveling Up</h2>
+            <p>
+              This section should be considered as advice and not general rules,
+              most of these things are meant to make leveling up more efficient.
+            </p>
+
+            <section id="ops" class="pb-3">
+              <h3>Ops</h3>
+              <p>
+                This section should be considered as advice and not general
+                rules, most of these things are meant to make leveling up more
+                efficient.
+              </p>
+              <ul>
+                <li>- !daily</li>
+              </ul>
+            </section>
+
+            <section id="faction-locking">
+              <h3>Faction locking</h3>
+              <p>
+                While doing missions or killing hostiles in Federation, Romulan
+                or Klingon space, you can increase or decrease your reputation
+                to these factions. The better the reputation, the more options
+                you have in the faction store to get things like recruit tokens
+                or ship blueprints. Here are a few facts:
+              </p>
+              <ul>
+                <li>
+                  - If your reputation to a faction goes below 0, every time you
+                  enter a system by that faction, your ship will get a chaser (a
+                  hostile ship chasing yours). Faction store also gets closed
+                  and there are no dailies for that faction.
+                </li>
+                <li>
+                  - If you get to 10 million, the value will never go down from
+                  that (AKA, faction has been locked). This opens the
+                  possibility to start getting prints for your first epic ship
+                  (Enterprise, D4 and Augur).
+                </li>
+                <li>
+                  - It is generally recommended to lock factions 1 at a time,
+                  however you could theoretically do 2, but it would take a lot
+                  of time.
+                </li>
+              </ul>
+              <p>
+                As soon as you start getting missions that give you faction
+                reputation choose one and archive the missions that increase
+                your reputation for the other factions. Here are some tips for
+                locking the first one:
+              </p>
+              <ul>
+                <li>- Always do your faction dailies.</li>
+                <li>
+                  - Always hit faction transports instead of any other ship,
+                  transports usually give 2 times or more reputation.
+                </li>
+                <li>
+                  - To do your dailies, choose the appropriate faction to kill
+                  hostiles for:
+                  <ul>
+                    <li>o If you choose the Federation, hit Klingons.</li>
+                    <li>o If you choose Klingons, hit Romulans.</li>
+                    <li>o If you choose Romulans, hit the Federation.</li>
+                  </ul>
+                </li>
+                <li>
+                  - Always join the daily reputation event. If you feel you
+                  cannot finish it, you can donate the necessary resources to
+                  your alliance, and it will count towards the event.
+                </li>
+                <li>
+                  - Add an additional “daily” to go get some Inert Nanoprobes,
+                  refine them into Charged Nanoprobes and convert them to
+                  reputation points. You can do this daily.
+                </li>
+                <li>
+                  - Kill as many hostiles of the highest level you can per day.
+                </li>
+              </ul>
+            </section>
+          </section>
+        </div>
+      </div>
     </div>
-    <div class="content">
-      <h2>Grinding hostiles</h2>
-      <h3>Crews</h3>
-      <p>1) Pike (C), Moreau, Chen</p>
-      <h3>Hostile hotspots by level</h3>
-      <h4>Romulan space</h4>
-      <p>- 40</p>
-      <ul>
-        <li>System 1</li>
-        <li>System 2</li>
-        <li>System 3</li>
-      </ul>
 
-      <h4>Federation space</h4>
-      <p>- 40</p>
-      <ul>
-        <li>System 1</li>
-        <li>System 2</li>
-        <li>System 3</li>
-      </ul>
-
-      <h4>Klingon space</h4>
-      <p>- 40</p>
-      <ul>
-        <li>System 1</li>
-        <li>System 2</li>
-        <li>System 3</li>
-      </ul>
-
-      <h2>Armadas</h2>
-      <h3>Normal armadas</h3>
-      <h4>Crews</h4>
-      <ul>
-        <li>Gorkon (C), Kerla, Azetbur</li>
-        <li>Kirk (C), Spok, Bones</li>
-      </ul>
-      <h3>Exchange</h3>
-      <h4>Crews</h4>
-      <ul>
-        <li>Gorkon (C), Kerla, Azetbur</li>
-        <li>Kirk (C), Spok, Bones</li>
-      </ul>
-    </div>
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
